@@ -1,0 +1,107 @@
+[
+  {
+    "id": "m1",
+    "name": "Traditional/Old School",
+    "price": "8.99",
+    "description": "Features bold black outlines, bright primary colors, and iconic designs such as roses, anchors, eagles, and skulls.",
+    "image": "images/1.jpg"
+  },
+  {
+    "id": "m2",
+    "name": " Neo-Traditional",
+    "price": "12.99",
+    "description": "A modern take on traditional tattoos with more intricate shading, broader color palettes, and detailed designs.",
+    "image": "images/2.jpg"
+  },
+  {
+    "id": "m3",
+    "name": "Realism",
+    "price": "7.99",
+    "description": "Hyper-realistic tattoos that mimic photographs or real-life subjects.",
+    "image": "images/3.jpg"
+  },
+  {
+    "id": "m4",
+    "name": "Blackwork",
+    "price": "10.99",
+    "description": "Uses black ink to create intricate patterns, geometric shapes, and detailed shading.",
+    "image": "images/4.jpg"
+  },
+  {
+    "id": "m5",
+    "name": "Watercolor",
+    "price": "9.99",
+    "description": "Known for its soft, flowing color gradients that resemble watercolor paintings.",
+    "image": "images/5.jpg"
+  },
+  {
+    "id": "m6",
+    "name": "Geometric",
+    "price": "10.99",
+    "description": "Features shapes like circles, triangles, and lines in precise and symmetrical patterns.",
+    "image": "images/6.jpg"
+  },
+  {
+    "id": "m7",
+    "name": "Minimalist",
+    "price": "17.99",
+    "description": " Simple and clean designs, often with thin lines and limited color use.",
+    "image": "images/7.jpg"
+  },
+  {
+    "id": "m8",
+    "name": "Tribal",
+    "price": "15.99",
+    "description": "Consists of bold, black lines and patterns that often have cultural or spiritual significance.",
+    "image": "images/8.jpg"
+  },
+  {
+    "id": "m9",
+    "name": "Japanese",
+    "price": "13.99",
+    "description": "Traditional Japanese tattoos feature large, colorful designs, often including mythological creatures, floral elements, and symbols like koi fish and dragons.",
+    "image": "images/9.jpg"
+  },
+  {
+    "id": "m10",
+    "name": "Dotwork",
+    "price": "11.99",
+    "description": "Utilizes dots to create shading, patterns, and images.",
+    "image": "images/10.jpg"
+  },
+  {
+    "id": "m11",
+    "name": "Surrealism",
+    "price": "19.99",
+    "description": "Inspired by surrealist art, these tattoos depict dreamlike or fantastical scenes.",
+    "image": "images/11.jpg"
+  },
+  {
+    "id": "m12",
+    "name": "Trash Polka",
+    "price": "8.99",
+    "description": " A bold and unique style combining realistic imagery with splashes of red and black paint.",
+    "image": "images/12.jpg"
+  },
+  {
+    "id": "m13",
+    "name": "Fine Line",
+    "price": "12.99",
+    "description": "Features delicate, thin lines to create detailed and intricate designs.",
+    "image": "images/13.jpg"
+  },
+  {
+    "id": "m14",
+    "name": "Lettering/Script",
+    "price": "9.99",
+    "description": "Tattoos focused on typography, whether quotes, names, or phrases.",
+    "image": "images/14.jpg"
+  },
+  {
+    "id": "m15",
+    "name": "Portrait",
+    "price": "5.99",
+    "description": "Realistic or stylized portraits of people, often done in black and gray or full color.",
+    "image": "images/15.jpg"
+  }
+]
