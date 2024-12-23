@@ -17,25 +17,65 @@ const cartTotal = cartCtx.items.reduce(
         userProgressCtx.hideCheckout()
     }
 
-    function handleSubmit(event) {
-        event.preventDefault()
+    // async function handleSubmit(event) {
+    //     event.preventDefault()
 
-    const fd = new FormData(event.target)
-    const customerData = Object.fromEntries(fd.entries()); // {email: text@example.com}
+    // const fd = new FormData(event.target)
+    // const customerData = Object.fromEntries(fd.entries()); // {email: text@example.com}
 
-       fetch('http://localhost:3000/orders', {
-        method:'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            order: {
+    //    try {
+    //     const response=  await fetch('http://localhost:3000/orders', {
+    //         method:'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify({
+    //             order: {
+    //                 items: cartCtx.items,
+    //                 customer: customerData
+    //             }
+    //         })
+    //        })
+            
+    //         console.log(response)
+    //    } catch (error) {
+    //     console.log(error)
+    //    }
+    // }
+
+    async function handleSubmit(event) {
+        event.preventDefault();
+        const fd = new FormData(event.target);
+        const customerData = Object.fromEntries(fd.entries());
+      
+        try {
+          const response = await fetch("http://localhost:3000/orders", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              order: {
                 items: cartCtx.items,
-                customer: customerData
-            }
-        })
-       })
-    }
+                customer: customerData,
+              },
+            }),
+          });
+      
+          if (!response.ok) {
+            const errorData = await response.json();
+            console.error("Error:", errorData.message);
+            alert(errorData.message);
+            return;
+          }
+      
+          console.log("Order submitted successfully:", await response.json());
+        } catch (error) {
+          console.error("Error submitting order:", error);
+          alert("Failed to submit order. Please try again.");
+        }
+      }
+      
 
 
     return ( 
@@ -55,7 +95,7 @@ const cartTotal = cartCtx.items.reduce(
     Close
 </Button>
       
-       <Button>Submit Order</Button>
+       <Button>Submit Order...</Button>
      
      </p>
     </form>
