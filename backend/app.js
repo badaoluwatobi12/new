@@ -77,8 +77,8 @@ app.post("/orders", async (req, res) => {
       port: 587,
       secure: false, // true for 465, false for other ports
       auth: {
-        user: "adedokunseyi96@gmail.com",
-        pass: "rlsarskfiwnkqrtv",
+        user: "badaoluwatobi12@gmail.com",
+        pass: "enter your pass code",
       },
     });
 
@@ -131,4 +131,3 @@ app.use((req, res) => {
 app.listen(3000);
 
 
-//  rlsa rskf iwnk qrtv

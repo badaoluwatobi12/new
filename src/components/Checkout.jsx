@@ -17,31 +17,7 @@ const cartTotal = cartCtx.items.reduce(
         userProgressCtx.hideCheckout()
     }
 
-    // async function handleSubmit(event) {
-    //     event.preventDefault()
 
-    // const fd = new FormData(event.target)
-    // const customerData = Object.fromEntries(fd.entries()); // {email: text@example.com}
-
-    //    try {
-    //     const response=  await fetch('http://localhost:3000/orders', {
-    //         method:'POST',
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //         },
-    //         body: JSON.stringify({
-    //             order: {
-    //                 items: cartCtx.items,
-    //                 customer: customerData
-    //             }
-    //         })
-    //        })
-            
-    //         console.log(response)
-    //    } catch (error) {
-    //     console.log(error)
-    //    }
-    // }
 
     async function handleSubmit(event) {
         event.preventDefault();
@@ -68,11 +44,15 @@ const cartTotal = cartCtx.items.reduce(
             alert(errorData.message);
             return;
           }
+            const data= await response.json() 
       
-          console.log("Order submitted successfully:", await response.json());
+            // console.log("Order submitted successfully:", await response.json());
+            alert(data.message)
+            handleClose()
         } catch (error) {
           console.error("Error submitting order:", error);
-          alert("Failed to submit order. Please try again.");
+            alert("Failed to submit order. Please try again.");
+            // handleClose()
         }
       }
       
@@ -95,7 +75,7 @@ const cartTotal = cartCtx.items.reduce(
     Close
 </Button>
       
-       <Button>Submit Order...</Button>
+       <Button>Submit Order</Button>
      
      </p>
     </form>
